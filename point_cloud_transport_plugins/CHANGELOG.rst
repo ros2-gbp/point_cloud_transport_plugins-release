@@ -2,13 +2,11 @@
 Changelog for package point_cloud_transport_plugins
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-3.0.0 (2023-09-20)
+1.0.7 (2023-09-21)
 ------------------
 
-2.0.0 (2023-09-18)
+1.0.6 (2023-09-20)
 ------------------
-* Port to ROS 2
-* Contributors: Alejandro Hernandez Cordero, john-maidbot
 
 1.0.5 (2023-06-16)
 ------------------
