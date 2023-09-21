@@ -1,0 +1,12 @@
+Source: ros-iron-draco-point-cloud-transport
+Section: misc
+Priority: optional
+Maintainer: Martin Pecka <peckama2@fel.cvut.cz>
+Build-Depends: debhelper (>= 9.0.0), libdraco-dev, ros-iron-ament-cmake, ros-iron-ament-lint-auto <!nocheck>, ros-iron-ament-lint-common <!nocheck>, ros-iron-pluginlib, ros-iron-point-cloud-interfaces, ros-iron-point-cloud-transport, ros-iron-rclcpp, ros-iron-sensor-msgs, ros-iron-std-msgs, ros-iron-ros-workspace
+Homepage: https://wiki.ros.org/draco_point_cloud_transport
+Standards-Version: 3.9.2
+
+Package: ros-iron-draco-point-cloud-transport
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libdraco-dev, ros-iron-pluginlib, ros-iron-point-cloud-interfaces, ros-iron-point-cloud-transport, ros-iron-rclcpp, ros-iron-sensor-msgs, ros-iron-std-msgs, ros-iron-ros-workspace
+Description: draco_point_cloud_transport provides a plugin to point_cloud_transport for sending point clouds encoded with KD tree compression.
