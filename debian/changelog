@@ -1,0 +1,22 @@
+ros-rolling-point-cloud-interfaces (3.0.1-1bullseye) bullseye; urgency=high
+
+
+
+ -- Martin Pecka <peckama2@fel.cvut.cz>  Wed, 04 Oct 2023 22:00:00 -0000
+
+ros-rolling-point-cloud-interfaces (3.0.0-1bullseye) bullseye; urgency=high
+
+
+
+ -- Martin Pecka <peckama2@fel.cvut.cz>  Tue, 19 Sep 2023 22:00:00 -0000
+
+ros-rolling-point-cloud-interfaces (2.0.0-1bullseye) bullseye; urgency=high
+
+  * Set version to zero, this package was never released (#15 <https://github.com/ros-perception/point_cloud_transport_plugins/issues/15>)
+  * Add compression format field (#11 <https://github.com/ros-perception/point_cloud_transport_plugins/issues/11>)
+  * Added common tests (#2 <https://github.com/ros-perception/point_cloud_transport_plugins/issues/2>)
+  * Contributors: Alejandro Hernández Cordero, john-maidbot
+
+ -- Martin Pecka <peckama2@fel.cvut.cz>  Sun, 17 Sep 2023 22:00:00 -0000
+
+
