@@ -1,0 +1,29 @@
+ros-iron-zstd-point-cloud-transport (2.0.3-1bullseye) bullseye; urgency=high
+
+
+
+ -- Alejandro Hernandez Cordero <alejandro@openrobotics.org>  Mon, 11 Dec 2023 23:00:00 -0000
+
+ros-iron-zstd-point-cloud-transport (2.0.2-1bullseye) bullseye; urgency=high
+
+  * Fixed parameter names (#28 <https://github.com/ros-perception/point_cloud_transport_plugins/issues/28>) (#30 <https://github.com/ros-perception/point_cloud_transport_plugins/issues/30>)
+    (cherry picked from commit 45c42b086cadb54ae88a102c6d3802589e267690)
+    Co-authored-by: Alejandro Hernández Cordero <mailto:ahcorde@gmail.com>
+  * Contributors: mergify[bot]
+
+ -- Alejandro Hernandez Cordero <alejandro@openrobotics.org>  Wed, 04 Oct 2023 22:00:00 -0000
+
+ros-iron-zstd-point-cloud-transport (2.0.1-1bullseye) bullseye; urgency=high
+
+
+
+ -- Alejandro Hernandez Cordero <alejandro@openrobotics.org>  Wed, 20 Sep 2023 22:00:00 -0000
+
+ros-iron-zstd-point-cloud-transport (2.0.0-1bullseye) bullseye; urgency=high
+
+  * Added ZSTD plugin (#12 <https://github.com/ros-perception/point_cloud_transport_plugins/issues/12>) (#16 <https://github.com/ros-perception/point_cloud_transport_plugins/issues/16>)
+  * Contributors: Alejandro Hernández Cordero
+
+ -- Alejandro Hernandez Cordero <alejandro@openrobotics.org>  Sun, 17 Sep 2023 22:00:00 -0000
+
+
