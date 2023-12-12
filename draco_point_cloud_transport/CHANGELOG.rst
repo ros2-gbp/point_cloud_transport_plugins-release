@@ -2,20 +2,26 @@
 Changelog for package draco_point_cloud_transport
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-3.0.2 (2023-12-12)
+2.0.3 (2023-12-12)
 ------------------
-* Fixed draco subscriber param names (`#38 <https://github.com/ros-perception/point_cloud_transport_plugins/issues/38>`_)
-* Contributors: Alejandro Hernández Cordero
+* Fixed draco subscriber param names (`#38 <https://github.com/ros-perception/point_cloud_transport_plugins/issues/38>`_) (`#40 <https://github.com/ros-perception/point_cloud_transport_plugins/issues/40>`_)
+  (cherry picked from commit 7d3294d9a3630c989e53b88b16436d6147c88242)
+  Co-authored-by: Alejandro Hernández Cordero <ahcorde@gmail.com>
+* Contributors: mergify[bot]
 
-3.0.1 (2023-10-05)
+2.0.2 (2023-10-05)
 ------------------
-* Fixed parameter names (`#28 <https://github.com/ros-perception/point_cloud_transport_plugins/issues/28>`_)
-* Contributors: Alejandro Hernández Cordero
+* Fixed parameter names (`#28 <https://github.com/ros-perception/point_cloud_transport_plugins/issues/28>`_) (`#30 <https://github.com/ros-perception/point_cloud_transport_plugins/issues/30>`_)
+  (cherry picked from commit 45c42b086cadb54ae88a102c6d3802589e267690)
+  Co-authored-by: Alejandro Hernández Cordero <ahcorde@gmail.com>
+* Contributors: mergify[bot]
 
-3.0.0 (2023-09-20)
+2.0.1 (2023-09-21)
 ------------------
-* feat: use tl_expected of ros package (`#22 <https://github.com/ros-perception/point_cloud_transport_plugins/issues/22>`_)
-* Contributors: Daisuke Nishimatsu
+* feat: use tl_expected of ros package (`#22 <https://github.com/ros-perception/point_cloud_transport_plugins/issues/22>`_) (`#26 <https://github.com/ros-perception/point_cloud_transport_plugins/issues/26>`_)
+  (cherry picked from commit ad4b632d977a8a06d641bd3fe1b21fc4ba8da0dd)
+  Co-authored-by: Daisuke Nishimatsu <42202095+wep21@users.noreply.github.com>
+* Contributors: mergify[bot]
 
 2.0.0 (2023-09-18)
 ------------------
