@@ -1,0 +1,12 @@
+Source: ros-humble-zstd-point-cloud-transport
+Section: misc
+Priority: optional
+Maintainer: Alejandro Hernandez Cordero <alejandro@openrobotics.org>
+Build-Depends: debhelper (>= 9.0.0), libzstd-dev, ros-humble-ament-cmake, ros-humble-ament-lint-auto <!nocheck>, ros-humble-ament-lint-common <!nocheck>, ros-humble-pluginlib, ros-humble-point-cloud-interfaces, ros-humble-point-cloud-transport, ros-humble-rclcpp, ros-humble-ros-workspace
+Homepage: https://wiki.ros.org/draco_point_cloud_transport
+Standards-Version: 3.9.2
+
+Package: ros-humble-zstd-point-cloud-transport
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libzstd-dev, ros-humble-pluginlib, ros-humble-point-cloud-interfaces, ros-humble-point-cloud-transport, ros-humble-rclcpp, ros-humble-ros-workspace
+Description: zstd_point_cloud_transport provides a plugin to point_cloud_transport for sending point clouds encoded with lib
