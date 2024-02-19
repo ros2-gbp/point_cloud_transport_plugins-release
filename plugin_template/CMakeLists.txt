@@ -1,42 +1,35 @@
+# TODO (YourNameHere): This is not a working CMake Project! 
+# Some assembly required for your plugin. (-:
+
 cmake_minimum_required(VERSION 3.10.2)
 
 set(CMAKE_CXX_STANDARD 17)
 
-project(draco_point_cloud_transport)
+project(template_point_cloud_transport)
 
 find_package(ament_cmake REQUIRED)
 find_package(pluginlib REQUIRED)
 find_package(point_cloud_interfaces REQUIRED)
 find_package(point_cloud_transport REQUIRED)
 find_package(rclcpp REQUIRED)
-find_package(rcpputils REQUIRED)
-find_package(sensor_msgs REQUIRED)
-find_package(std_msgs REQUIRED)
-
-find_package(Draco REQUIRED)
+# TODO (YourNameHere): You might need more dependencies
 
 set(dependencies
   pluginlib
   point_cloud_interfaces
   point_cloud_transport
   rclcpp
-  rcpputils
-  sensor_msgs
-  std_msgs
 )
 
-
-include_directories(include ${DRACO_INCLUDE_DIR})
+include_directories(include)
 
 add_library(${PROJECT_NAME}
   SHARED
-  src/cloud.cpp
-  src/draco_publisher.cpp
-  src/draco_subscriber.cpp
+  # TODO (YourNameHere): You might need more source files
   src/manifest.cpp
+  src/template_publisher.cpp
+  src/template_subscriber.cpp
 )
-
-target_link_libraries(${PROJECT_NAME} ${DRACO_LIBRARY})
 
 ament_target_dependencies(${PROJECT_NAME} ${dependencies})
 
@@ -51,7 +44,7 @@ install(
   DESTINATION include/${PROJECT_NAME}
 )
 
-pluginlib_export_plugin_description_file(point_cloud_transport draco_plugins.xml)
+pluginlib_export_plugin_description_file(point_cloud_transport template_plugins.xml)
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)

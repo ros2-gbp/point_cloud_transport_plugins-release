@@ -1,6 +1,6 @@
 /*
- * Copyright (c) 2023, Czech Technical University in Prague
- * Copyright (c) 2019, paplhjak
+ * Copyright (c) <Current Year>, <Your Name Here> (if desired)
+ * Copyright (c) 2023, Open Source Robotics Foundation, Inc.
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -30,17 +30,44 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-#include <pluginlib/class_list_macros.hpp>
+#ifndef TEMPLATE_POINT_CLOUD_TRANSPORT__TEMPLATE_PUBLISHER_HPP_
+#define TEMPLATE_POINT_CLOUD_TRANSPORT__TEMPLATE_PUBLISHER_HPP_
 
-#include <point_cloud_transport/publisher_plugin.hpp>
-#include <point_cloud_transport/subscriber_plugin.hpp>
+#include <string>
 
-#include <zlib_point_cloud_transport/zlib_publisher.hpp>
-#include <zlib_point_cloud_transport/zlib_subscriber.hpp>
+#include <sensor_msgs/msg/point_cloud2.hpp>
 
-PLUGINLIB_EXPORT_CLASS(
-  zlib_point_cloud_transport::ZlibPublisher,
-  point_cloud_transport::PublisherPlugin)
-PLUGINLIB_EXPORT_CLASS(
-  zlib_point_cloud_transport::ZlibSubscriber,
-  point_cloud_transport::SubscriberPlugin)
+#include <point_cloud_transport/point_cloud_transport.hpp>
+
+#include <point_cloud_transport/simple_publisher_plugin.hpp>
+#include <point_cloud_interfaces/msg/custom_message.hpp>
+
+namespace template_point_cloud_transport
+{
+
+// CustomMessage could be any ROS2 message.
+// e.g. point_cloud_interfaces::msg::CompressedPointCloud2, or you can make a new one. If you do, please
+// add the definiton to point_cloud_interfaces.
+class TemplatePublisher
+  : public point_cloud_transport::SimplePublisherPlugin<
+    point_cloud_interfaces::msg::CustomMessage>
+{
+public:
+  std::string getTransportName() const override;
+
+  void declareParameters(const std::string & base_topic) override;
+
+  std::string getDataType() const override
+  {
+    // return the name of whichever message you chose as a string
+    return "point_cloud_interfaces/msg/CustomMessage";
+  }
+
+  TypedEncodeResult encodeTyped(const sensor_msgs::msg::PointCloud2 & raw) const override;
+
+private:
+  // good place to put any internal variables (e.g. compression algo parameters)
+};
+}  // namespace template_point_cloud_transport
+
+#endif  // TEMPLATE_POINT_CLOUD_TRANSPORT__TEMPLATE_PUBLISHER_HPP_
