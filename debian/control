@@ -1,0 +1,12 @@
+Source: ros-rolling-zlib-point-cloud-transport
+Section: misc
+Priority: optional
+Maintainer: Alejandro Hernandez Cordero <alejandro@openrobotics.org>
+Build-Depends: debhelper (>= 9.0.0), ament-cmake, ament-cmake-copyright <!nocheck>, ament-cmake-cppcheck <!nocheck>, ament-cmake-cpplint <!nocheck>, ament-cmake-flake8 <!nocheck>, ament-cmake-lint-cmake <!nocheck>, ament-cmake-pep257 <!nocheck>, ament-cmake-uncrustify <!nocheck>, ament-cmake-xmllint <!nocheck>, ament-lint <!nocheck>, pluginlib-dev, ros-rolling-point-cloud-interfaces, ros-rolling-point-cloud-transport, ros-rolling-rclcpp, zlib1g-dev, ros-rolling-ros-workspace
+Homepage: https://wiki.ros.org/draco_point_cloud_transport
+Standards-Version: 3.9.2
+
+Package: ros-rolling-zlib-point-cloud-transport
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, pluginlib-dev, ros-rolling-point-cloud-interfaces, ros-rolling-point-cloud-transport, ros-rolling-rclcpp, zlib1g-dev, ros-rolling-ros-workspace
+Description: zlib_point_cloud_transport provides a plugin to point_cloud_transport for sending point clouds encoded with zlib
