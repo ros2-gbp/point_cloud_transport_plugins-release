@@ -1,1 +1,1 @@
-{"base": "f8e5493", "parent": "debian/rolling/point_cloud_interfaces", "previous": "aec6eee", "trim": "", "trimbase": ""}
+{"base": "afce00c", "parent": "debian/jazzy/point_cloud_interfaces", "previous": "c647cf9", "trim": "", "trimbase": ""}
