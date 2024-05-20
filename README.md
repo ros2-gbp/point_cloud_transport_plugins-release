@@ -1,3 +1,31 @@
+## point_cloud_transport_plugins (iron) - 2.0.5-1
+
+The packages in the `point_cloud_transport_plugins` repository were released into the `iron` distro by running `/usr/bin/bloom-release --rosdistro iron --track iron point_cloud_transport_plugins` on `Mon, 20 May 2024 13:02:43 -0000`
+
+These packages were released:
+- `draco_point_cloud_transport`
+- `point_cloud_interfaces`
+- `point_cloud_transport_plugins`
+- `zlib_point_cloud_transport`
+- `zstd_point_cloud_transport`
+
+Version of package(s) in repository `point_cloud_transport_plugins`:
+
+- upstream repository: https://github.com/ros-perception/point_cloud_transport_plugins
+- release repository: https://github.com/ros2-gbp/point_cloud_transport_plugins-release.git
+- rosdistro version: `2.0.4-1`
+- old version: `2.0.4-1`
+- new version: `2.0.5-1`
+
+Versions of tools used:
+
+- bloom version: `0.12.0`
+- catkin_pkg version: `0.5.2`
+- rosdep version: `0.24.0`
+- rosdistro version: `0.9.1`
+- vcstools version: `0.1.42`
+
+
 ## point_cloud_transport_plugins (humble) - 1.0.10-1
 
 The packages in the `point_cloud_transport_plugins` repository were released into the `humble` distro by running `/usr/bin/bloom-release --rosdistro humble --track humble point_cloud_transport_plugins` on `Mon, 19 Feb 2024 13:58:47 -0000`
