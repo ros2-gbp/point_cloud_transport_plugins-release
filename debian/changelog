@@ -1,0 +1,53 @@
+ros-jazzy-zlib-point-cloud-transport (4.0.0-1bookworm) bookworm; urgency=high
+
+
+
+ -- Alejandro Hernandez Cordero <alejandro@openrobotics.org>  Thu, 23 May 2024 22:00:00 -0000
+
+ros-jazzy-zlib-point-cloud-transport (3.0.4-1bookworm) bookworm; urgency=high
+
+  * Get user specified parameters at startup (#46 <https://github.com/ros-perception/point_cloud_transport_plugins/issues/46>) (#49 <https://github.com/ros-perception/point_cloud_transport_plugins/issues/49>)
+    Co-authored-by: Alejandro Hernández Cordero <mailto:ahcorde@gmail.com>
+    (cherry picked from commit 46f3d22f3d5660529f4372aeed3fbcb41852a911)
+    Co-authored-by: john-maidbot <mailto:78750993+john-maidbot@users.noreply.github.com>
+  * Contributors: mergify[bot]
+
+ -- Alejandro Hernandez Cordero <alejandro@openrobotics.org>  Thu, 23 May 2024 22:00:00 -0000
+
+ros-jazzy-zlib-point-cloud-transport (3.0.3-1bookworm) bookworm; urgency=high
+
+
+
+ -- Alejandro Hernandez Cordero <alejandro@openrobotics.org>  Sat, 18 Feb 2023 23:00:00 -0000
+
+ros-jazzy-zlib-point-cloud-transport (3.0.2-1bookworm) bookworm; urgency=high
+
+
+
+ -- Alejandro Hernandez Cordero <alejandro@openrobotics.org>  Mon, 11 Dec 2023 23:00:00 -0000
+
+ros-jazzy-zlib-point-cloud-transport (3.0.1-1bookworm) bookworm; urgency=high
+
+  * Fixed parameter names (#28 <https://github.com/ros-perception/point_cloud_transport_plugins/issues/28>)
+  * Contributors: Alejandro Hernández Cordero
+
+ -- Alejandro Hernandez Cordero <alejandro@openrobotics.org>  Wed, 04 Oct 2023 22:00:00 -0000
+
+ros-jazzy-zlib-point-cloud-transport (3.0.0-1bookworm) bookworm; urgency=high
+
+
+
+ -- Alejandro Hernandez Cordero <alejandro@openrobotics.org>  Tue, 19 Sep 2023 22:00:00 -0000
+
+ros-jazzy-zlib-point-cloud-transport (2.0.0-1bookworm) bookworm; urgency=high
+
+  * Set version to zero, this package was never released (#15 <https://github.com/ros-perception/point_cloud_transport_plugins/issues/15>)
+  * Add compression format field (#11 <https://github.com/ros-perception/point_cloud_transport_plugins/issues/11>)
+  * Added encode level dynamic parameter zlib (#9 <https://github.com/ros-perception/point_cloud_transport_plugins/issues/9>)
+  * add getdatatype (#7 <https://github.com/ros-perception/point_cloud_transport_plugins/issues/7>)
+  * Zlib point cloud tranport plugin (#5 <https://github.com/ros-perception/point_cloud_transport_plugins/issues/5>)
+  * Contributors: Alejandro Hernández Cordero, john-maidbot
+
+ -- Alejandro Hernandez Cordero <alejandro@openrobotics.org>  Sun, 17 Sep 2023 22:00:00 -0000
+
+
