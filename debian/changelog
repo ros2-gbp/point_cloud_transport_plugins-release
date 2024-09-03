@@ -1,0 +1,100 @@
+ros-jazzy-draco-point-cloud-transport (4.0.1-1bookworm) bookworm; urgency=high
+
+  * Change Linking to DRACO_LIBRARIES as it was changes in draco (backport #57 <https://github.com/ros-perception/point_cloud_transport_plugins/issues/57>) (#58 <https://github.com/ros-perception/point_cloud_transport_plugins/issues/58>)
+    Co-authored-by: Bo Chen <mailto:bo@enway.ai>
+  * Contributors: mergify[bot]
+
+ -- Martin Pecka <peckama2@fel.cvut.cz>  Mon, 02 Sep 2024 22:00:00 -0000
+
+ros-jazzy-draco-point-cloud-transport (4.0.0-1bookworm) bookworm; urgency=high
+
+
+
+ -- Martin Pecka <peckama2@fel.cvut.cz>  Thu, 23 May 2024 22:00:00 -0000
+
+ros-jazzy-draco-point-cloud-transport (3.0.4-1bookworm) bookworm; urgency=high
+
+  * Get user specified parameters at startup (#46 <https://github.com/ros-perception/point_cloud_transport_plugins/issues/46>) (#49 <https://github.com/ros-perception/point_cloud_transport_plugins/issues/49>)
+    Co-authored-by: Alejandro Hernández Cordero <mailto:ahcorde@gmail.com>
+    (cherry picked from commit 46f3d22f3d5660529f4372aeed3fbcb41852a911)
+    Co-authored-by: john-maidbot <mailto:78750993+john-maidbot@users.noreply.github.com>
+  * Update CI (#47 <https://github.com/ros-perception/point_cloud_transport_plugins/issues/47>)
+  * Contributors: Alejandro Hernández Cordero, mergify[bot]
+
+ -- Martin Pecka <peckama2@fel.cvut.cz>  Thu, 23 May 2024 22:00:00 -0000
+
+ros-jazzy-draco-point-cloud-transport (3.0.3-1bookworm) bookworm; urgency=high
+
+  * Use tl_expected from rcpputils (#42 <https://github.com/ros-perception/point_cloud_transport_plugins/issues/42>)
+  * Contributors: Alejandro Hernández Cordero
+
+ -- Martin Pecka <peckama2@fel.cvut.cz>  Sat, 18 Feb 2023 23:00:00 -0000
+
+ros-jazzy-draco-point-cloud-transport (3.0.2-1bookworm) bookworm; urgency=high
+
+  * Fixed draco subscriber param names (#38 <https://github.com/ros-perception/point_cloud_transport_plugins/issues/38>)
+  * Contributors: Alejandro Hernández Cordero
+
+ -- Martin Pecka <peckama2@fel.cvut.cz>  Mon, 11 Dec 2023 23:00:00 -0000
+
+ros-jazzy-draco-point-cloud-transport (3.0.1-1bookworm) bookworm; urgency=high
+
+  * Fixed parameter names (#28 <https://github.com/ros-perception/point_cloud_transport_plugins/issues/28>)
+  * Contributors: Alejandro Hernández Cordero
+
+ -- Martin Pecka <peckama2@fel.cvut.cz>  Wed, 04 Oct 2023 22:00:00 -0000
+
+ros-jazzy-draco-point-cloud-transport (3.0.0-1bookworm) bookworm; urgency=high
+
+  * feat: use tl_expected of ros package (#22 <https://github.com/ros-perception/point_cloud_transport_plugins/issues/22>)
+  * Contributors: Daisuke Nishimatsu
+
+ -- Martin Pecka <peckama2@fel.cvut.cz>  Tue, 19 Sep 2023 22:00:00 -0000
+
+ros-jazzy-draco-point-cloud-transport (2.0.0-1bookworm) bookworm; urgency=high
+
+  * Port to ROS 2
+  * Contributors: Alejandro Hernandez Cordero, john-maidbot
+
+ -- Martin Pecka <peckama2@fel.cvut.cz>  Sun, 17 Sep 2023 22:00:00 -0000
+
+ros-jazzy-draco-point-cloud-transport (1.0.5-1bookworm) bookworm; urgency=high
+
+  * Fixed formatting.
+  * Contributors: Martin Pecka
+
+ -- Martin Pecka <peckama2@fel.cvut.cz>  Thu, 15 Jun 2023 22:00:00 -0000
+
+ros-jazzy-draco-point-cloud-transport (1.0.4-1bookworm) bookworm; urgency=high
+
+  * Fixed handling of clouds with invalid points.
+  * Contributors: Martin Pecka
+
+ -- Martin Pecka <peckama2@fel.cvut.cz>  Thu, 15 Jun 2023 22:00:00 -0000
+
+ros-jazzy-draco-point-cloud-transport (1.0.3-1bookworm) bookworm; urgency=high
+
+  * Compatibility with GCC 7.
+  * Contributors: Martin Pecka
+
+ -- Martin Pecka <peckama2@fel.cvut.cz>  Fri, 12 May 2023 22:00:00 -0000
+
+ros-jazzy-draco-point-cloud-transport (1.0.2-1bookworm) bookworm; urgency=high
+
+  * Report log messages from the transport via the log helper.
+  * Hide draco library symbols from include files so that it does not have to be exported.
+  * Contributors: Martin Pecka
+
+ -- Martin Pecka <peckama2@fel.cvut.cz>  Wed, 10 May 2023 22:00:00 -0000
+
+ros-jazzy-draco-point-cloud-transport (1.0.1-1bookworm) bookworm; urgency=high
+
+  * More robust Draco CMake finding.
+  * Adopted direct encoders and decoders.
+  * Moved draco_point_cloud_transport into its own folder
+  * Forked from https://github.com/paplhjak/draco_point_cloud_transport
+  * Contributors: Martin Pecka, Jakub Paplham, Tomas Petricek
+
+ -- Martin Pecka <peckama2@fel.cvut.cz>  Wed, 10 May 2023 22:00:00 -0000
+
+
