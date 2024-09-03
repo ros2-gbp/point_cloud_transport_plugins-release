@@ -16,16 +16,17 @@ find_package(std_msgs REQUIRED)
 find_package(Draco REQUIRED)
 
 set(dependencies
-  pluginlib::pluginlib
-  ${point_cloud_interfaces_TARGETS}
-  point_cloud_transport::point_cloud_transport
-  rclcpp::rclcpp
-  rcpputils::rcpputils
-  ${sensor_msgs_TARGETS}
-  ${std_msgs_TARGETS}
+  pluginlib
+  point_cloud_interfaces
+  point_cloud_transport
+  rclcpp
+  rcpputils
+  sensor_msgs
+  std_msgs
 )
 
-include_directories(include)
+
+include_directories(include ${DRACO_INCLUDE_DIR})
 
 add_library(${PROJECT_NAME}
   SHARED
@@ -35,15 +36,9 @@ add_library(${PROJECT_NAME}
   src/manifest.cpp
 )
 
-target_link_libraries(${PROJECT_NAME} PRIVATE
-  ${DRACO_LIBRARIES}
-  ${dependencies}
-)
-target_include_directories(${PROJECT_NAME} PRIVATE
-  "$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>"
-  "$<INSTALL_INTERFACE:include/${PROJECT_NAME}>"
-  ${DRACO_INCLUDE_DIR}
-)
+target_link_libraries(${PROJECT_NAME} ${DRACO_LIBRARIES})
+
+ament_target_dependencies(${PROJECT_NAME} ${dependencies})
 
 install(TARGETS ${PROJECT_NAME}
   ARCHIVE DESTINATION lib
