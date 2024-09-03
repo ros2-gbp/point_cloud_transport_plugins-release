@@ -1,0 +1,49 @@
+ros-rolling-zstd-point-cloud-transport (5.0.1-1bookworm) bookworm; urgency=high
+
+  * Use target_link_libraries everywhere (#52 <https://github.com/ros-perception/point_cloud_transport_plugins/issues/52>)
+  * Contributors: Alejandro Hernández Cordero
+
+ -- Alejandro Hernandez Cordero <alejandro@openrobotics.org>  Mon, 02 Sep 2024 22:00:00 -0000
+
+ros-rolling-zstd-point-cloud-transport (5.0.0-1bookworm) bookworm; urgency=high
+
+  * Get user specified parameters at startup (#46 <https://github.com/ros-perception/point_cloud_transport_plugins/issues/46>)
+    Co-authored-by: Alejandro Hernández Cordero <mailto:ahcorde@gmail.com>
+  * Update CI (#47 <https://github.com/ros-perception/point_cloud_transport_plugins/issues/47>)
+  * Contributors: Alejandro Hernández Cordero, john-maidbot
+
+ -- Alejandro Hernandez Cordero <alejandro@openrobotics.org>  Thu, 23 May 2024 22:00:00 -0000
+
+ros-rolling-zstd-point-cloud-transport (3.0.3-1bookworm) bookworm; urgency=high
+
+
+
+ -- Alejandro Hernandez Cordero <alejandro@openrobotics.org>  Sat, 18 Feb 2023 23:00:00 -0000
+
+ros-rolling-zstd-point-cloud-transport (3.0.2-1bookworm) bookworm; urgency=high
+
+
+
+ -- Alejandro Hernandez Cordero <alejandro@openrobotics.org>  Mon, 11 Dec 2023 23:00:00 -0000
+
+ros-rolling-zstd-point-cloud-transport (3.0.1-1bookworm) bookworm; urgency=high
+
+  * Fixed parameter names (#28 <https://github.com/ros-perception/point_cloud_transport_plugins/issues/28>)
+  * Contributors: Alejandro Hernández Cordero
+
+ -- Alejandro Hernandez Cordero <alejandro@openrobotics.org>  Wed, 04 Oct 2023 22:00:00 -0000
+
+ros-rolling-zstd-point-cloud-transport (3.0.0-1bookworm) bookworm; urgency=high
+
+
+
+ -- Alejandro Hernandez Cordero <alejandro@openrobotics.org>  Tue, 19 Sep 2023 22:00:00 -0000
+
+ros-rolling-zstd-point-cloud-transport (2.0.0-1bookworm) bookworm; urgency=high
+
+  * Added ZSTD plugin (#12 <https://github.com/ros-perception/point_cloud_transport_plugins/issues/12>) (#16 <https://github.com/ros-perception/point_cloud_transport_plugins/issues/16>)
+  * Contributors: Alejandro Hernández Cordero
+
+ -- Alejandro Hernandez Cordero <alejandro@openrobotics.org>  Sun, 17 Sep 2023 22:00:00 -0000
+
+
