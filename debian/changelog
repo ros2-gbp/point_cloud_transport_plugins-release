@@ -1,0 +1,81 @@
+ros-rolling-point-cloud-transport-plugins (5.0.2-1noble) noble; urgency=high
+
+
+
+ -- Martin Pecka <peckama2@fel.cvut.cz>  Tue, 14 Oct 2025 22:00:00 -0000
+
+ros-rolling-point-cloud-transport-plugins (5.0.1-1noble) noble; urgency=high
+
+
+
+ -- Martin Pecka <peckama2@fel.cvut.cz>  Mon, 02 Sep 2024 22:00:00 -0000
+
+ros-rolling-point-cloud-transport-plugins (5.0.0-1noble) noble; urgency=high
+
+
+
+ -- Martin Pecka <peckama2@fel.cvut.cz>  Thu, 23 May 2024 22:00:00 -0000
+
+ros-rolling-point-cloud-transport-plugins (3.0.3-1noble) noble; urgency=high
+
+
+
+ -- Martin Pecka <peckama2@fel.cvut.cz>  Sat, 18 Feb 2023 23:00:00 -0000
+
+ros-rolling-point-cloud-transport-plugins (3.0.2-1noble) noble; urgency=high
+
+
+
+ -- Martin Pecka <peckama2@fel.cvut.cz>  Mon, 11 Dec 2023 23:00:00 -0000
+
+ros-rolling-point-cloud-transport-plugins (3.0.1-1noble) noble; urgency=high
+
+
+
+ -- Martin Pecka <peckama2@fel.cvut.cz>  Wed, 04 Oct 2023 22:00:00 -0000
+
+ros-rolling-point-cloud-transport-plugins (3.0.0-1noble) noble; urgency=high
+
+
+
+ -- Martin Pecka <peckama2@fel.cvut.cz>  Tue, 19 Sep 2023 22:00:00 -0000
+
+ros-rolling-point-cloud-transport-plugins (2.0.0-1noble) noble; urgency=high
+
+  * Port to ROS 2
+  * Contributors: Alejandro Hernandez Cordero, john-maidbot
+
+ -- Martin Pecka <peckama2@fel.cvut.cz>  Sun, 17 Sep 2023 22:00:00 -0000
+
+ros-rolling-point-cloud-transport-plugins (1.0.5-1noble) noble; urgency=high
+
+
+
+ -- Martin Pecka <peckama2@fel.cvut.cz>  Thu, 15 Jun 2023 22:00:00 -0000
+
+ros-rolling-point-cloud-transport-plugins (1.0.4-1noble) noble; urgency=high
+
+
+
+ -- Martin Pecka <peckama2@fel.cvut.cz>  Thu, 15 Jun 2023 22:00:00 -0000
+
+ros-rolling-point-cloud-transport-plugins (1.0.3-1noble) noble; urgency=high
+
+
+
+ -- Martin Pecka <peckama2@fel.cvut.cz>  Fri, 12 May 2023 22:00:00 -0000
+
+ros-rolling-point-cloud-transport-plugins (1.0.2-1noble) noble; urgency=high
+
+
+
+ -- Martin Pecka <peckama2@fel.cvut.cz>  Wed, 10 May 2023 22:00:00 -0000
+
+ros-rolling-point-cloud-transport-plugins (1.0.1-1noble) noble; urgency=high
+
+  * Added point_cloud_transport_plugins metapackage to this repo.
+  * Contributors: Martin Pecka, Jakub Paplham
+
+ -- Martin Pecka <peckama2@fel.cvut.cz>  Wed, 10 May 2023 22:00:00 -0000
+
+
