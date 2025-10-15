@@ -1,93 +1,51 @@
-# DRACO POINT CLOUD TRANSPORT
+# point_cloud_transport_plugins
 
-Plugin for ROS package [point_cloud_transport](https://wiki.ros.org/point_cloud_transport), which uses Google Draco compression library for low-bandwidth lossy transportation of PointCloud2 messages.
+[![Licence](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
-## Publisher
-The plugin provides dynamic reconfiguration parameters, which can be used to change the compression during runtime.
+ROS2 Distro | Build Status | Package build |
+:---------: | :----: | :----------: |
+Rolling |  [![Build Status](https://build.ros2.org/buildStatus/icon?job=Rdev__point_cloud_transport_plugins__ubuntu_noble_amd64)](https://build.ros2.org/job/Rdev__point_cloud_transport_plugins__ubuntu_noble_amd64/) |  [![Build Status](https://build.ros2.org/buildStatus/icon?job=Rbin_uN64__point_cloud_transport_plugins__ubuntu_noble_amd64__binary)](https://build.ros2.org/job/Rbin_uN64__point_cloud_transport_plugins__ubuntu_noble_amd64__binary/) |
+Jazzy |  [![Build Status](https://build.ros2.org/buildStatus/icon?job=Jdev__point_cloud_transport_plugins__ubuntu_noble_amd64)](https://build.ros2.org/job/Jdev__point_cloud_transport_plugins__ubuntu_noble_amd64/) |  [![Build Status](https://build.ros2.org/buildStatus/icon?job=Jbin_uN64__point_cloud_transport_plugins__ubuntu_noble_amd64__binary)](https://build.ros2.org/job/Jbin_uN64__point_cloud_transport_plugins__ubuntu_noble_amd64__binary/) |
+Iron |  [![Build Status](https://build.ros2.org/buildStatus/icon?job=Idev__point_cloud_transport_plugins__ubuntu_jammy_amd64)](https://build.ros2.org/job/Idev__point_cloud_transport_plugins__ubuntu_jammy_amd64/) |  [![Build Status](https://build.ros2.org/buildStatus/icon?job=Ibin_uJ64__point_cloud_transport_plugins__ubuntu_jammy_amd64__binary)](https://build.ros2.org/job/Ibin_uJ64__point_cloud_transport_plugins__ubuntu_jammy_amd64__binary/) |
+Humble |  [![Build Status](https://build.ros2.org/buildStatus/icon?job=Hdev__point_cloud_transport_plugins__ubuntu_jammy_amd64)](https://build.ros2.org/job/Hdev__point_cloud_transport_plugins__ubuntu_jammy_amd64/) |  [![Build Status](https://build.ros2.org/buildStatus/icon?job=Hbin_uJ64__point_cloud_transport_plugins__ubuntu_jammy_amd64__binary)](https://build.ros2.org/job/Hbin_uJ64__point_cloud_transport_plugins__ubuntu_jammy_amd64__binary/) |
 
-Draco cannot encode invalid values, so all pointclouds with invalid values are turned into unstructured dense clouds (no NaNs, height = 1).
+### draco_point_cloud_transport
 
-![publisher_settings](https://github.com/paplhjak/draco_point_cloud_transport/blob/master/readme_images/publisher.png)
+ROS2 Distro | Package build |
+:---------: | :----------: |
+Rolling | [![Build Status](https://build.ros2.org/buildStatus/icon?job=Rbin_uN64__draco_point_cloud_transport__ubuntu_noble_amd64__binary)](https://build.ros2.org/job/Rbin_uN64__draco_point_cloud_transport__ubuntu_noble_amd64__binary/) |
+Jazzy | [![Build Status](https://build.ros2.org/buildStatus/icon?job=Jbin_uN64__draco_point_cloud_transport__ubuntu_noble_amd64__binary)](https://build.ros2.org/job/Jbin_uN64__draco_point_cloud_transport__ubuntu_noble_amd64__binary/) |
+Iron | [![Build Status](https://build.ros2.org/buildStatus/icon?job=Ibin_uJ64__draco_point_cloud_transport__ubuntu_jammy_amd64__binary)](https://build.ros2.org/job/Ibin_uJ64__draco_point_cloud_transport__ubuntu_jammy_amd64__binary/) |
+Humble | [![Build Status](https://build.ros2.org/buildStatus/icon?job=Hbin_uJ64__draco_point_cloud_transport__ubuntu_jammy_amd64__binary)](https://build.ros2.org/job/Hbin_uJ64__draco_point_cloud_transport__ubuntu_jammy_amd64__binary/) |
 
-### Encode and Decode Speed
-By adjusting the **encode_speed** and **dedode_speed** parameters, one can adjust the speed at which the plugin encodes the point cloud. The higher the number, the higher the speed of encoding/decoding, but the worse the compression. For more detailed information, see documentation of [Draco](https://google.github.io/draco/).
+### zlib_point_cloud_transport
 
-### Encode Method
-**Auto** method decides on the encoding method based on other parameter and should be used as the default method.
+ROS2 Distro | Package build |
+:---------: | :----------: |
+Rolling | [![Build Status](https://build.ros2.org/buildStatus/icon?job=Rbin_uN64__zlib_point_cloud_transport__ubuntu_noble_amd64__binary)](https://build.ros2.org/job/Rbin_uN64__zlib_point_cloud_transport__ubuntu_noble_amd64__binary/) |
+Jazzy | [![Build Status](https://build.ros2.org/buildStatus/icon?job=Jbin_uN64__zlib_point_cloud_transport__ubuntu_noble_amd64__binary)](https://build.ros2.org/job/Jbin_uN64__zlib_point_cloud_transport__ubuntu_noble_amd64__binary/) |
+Iron | [![Build Status](https://build.ros2.org/buildStatus/icon?job=Ibin_uJ64__zlib_point_cloud_transport__ubuntu_jammy_amd64__binary)](https://build.ros2.org/job/Ibin_uJ64__zlib_point_cloud_transport__ubuntu_jammy_amd64__binary/) |
+Humble | [![Build Status](https://build.ros2.org/buildStatus/icon?job=Hbin_uJ64__zlib_point_cloud_transport__ubuntu_jammy_amd64__binary)](https://build.ros2.org/job/Hbin_uJ64__zlib_point_cloud_transport__ubuntu_jammy_amd64__binary/) |
 
-**KD-tree** method forces the encoder to use KD-tree encoding. If an attribute in the point cloud is of type float32, kd-tree encoding requires the attribute to be quantized.
+### zstd_point_cloud_transport
 
-**Sequential** method forces the encoder to use sequential encoding. Quantization can not be used with sequential encoding. Sequential encoding provides much worse compression than KD-tree, but is faster and keeps the arrangement of points in the point cloud intact. Therefore sequential encoding can be used to encode 2D point clouds such as from Kinect.
+ROS2 Distro | Package build |
+:---------: | :----------: |
+Rolling | [![Build Status](https://build.ros2.org/buildStatus/icon?job=Rbin_uN64__zstd_point_cloud_transport__ubuntu_noble_amd64__binary)](https://build.ros2.org/job/Rbin_uN64__zstd_point_cloud_transport__ubuntu_noble_amd64__binary/) |
+Jazzy | [![Build Status](https://build.ros2.org/buildStatus/icon?job=Jbin_uN64__zstd_point_cloud_transport__ubuntu_noble_amd64__binary)](https://build.ros2.org/job/Jbin_uN64__zstd_point_cloud_transport__ubuntu_noble_amd64__binary/) |
+Iron | [![Build Status](https://build.ros2.org/buildStatus/icon?job=Ibin_uJ64__zstd_point_cloud_transport__ubuntu_jammy_amd64__binary)](https://build.ros2.org/job/Ibin_uJ64__zstd_point_cloud_transport__ubuntu_jammy_amd64__binary/) |
+Humble | [![Build Status](https://build.ros2.org/buildStatus/icon?job=Hbin_uJ64__zstd_point_cloud_transport__ubuntu_jammy_amd64__binary)](https://build.ros2.org/job/Hbin_uJ64__zstd_point_cloud_transport__ubuntu_jammy_amd64__binary/) |
 
-### Deduplicate
-**Deduplicate** option tells the encoder whether or not to delete duplicate points in the point cloud, allowing for transport of smaller point clouds.
+This metapackage contains the most common plugins for pointcloud compression using [point_cloud_transport](https://wiki.ros.org/point_cloud_transport).
 
-### Force Quantization
-**Force_quantization** option forces the use of quantization and hence the KD-tree encoding method.
+Currently provided are:
 
-### Quantization of Attribute Types
-**Quantization_POSITION**, **Quantization_NORMAL**, **Quantization_COLOR** etc. tells the encoder how many bits should be used for quantization of given attribute type. Attribute type of point cloud attribute is recognized based on a list of known names:
- - "x" - POSITION
- - "y" - POSITION
- - "z" - POSITION
- - "pos" - POSITION
- - "position" - POSITION
- - "rgb" - COLOR
- - "rgba" - COLOR
- - "r"  - COLOR
- - "g" - COLOR
- - "b" - COLOR
- - "a" - COLOR
- - "nx" - NORMAL
- - "ny" - NORMAL
- - "nz" - NORMAL
- - all others are encoded as GENERIC
+- [draco_point_cloud_transport](https://github.com/ros-perception/point_cloud_transport_plugins/tree/rolling/draco_point_cloud_transport) - A library using Google Draco to compress the pointclouds.
 
- To specify custom quantization, one can either edit the list of recognized names or use **expert_quantization** and **expert_attribute_type** options.
+- [zlib_point_cloud_transport](https://github.com/ros-perception/point_cloud_transport_plugins/tree/rolling/zlib_point_cloud_transport) - A libraory using zlib to compress the pointclouds.
 
-### Expert Quantization
+- [zstd_point_cloud_transport](https://github.com/ros-perception/point_cloud_transport_plugins/tree/master/zstd_point_cloud_transport) - A library using ZSTD to compress the pointclouds.
 
-**Expert_quantization** option tell the encoder to use custom quantization values for point cloud attributes. Multiple POSITION attribute can therefore be encoded with varying quantization levels.
+More transports can be added. Pull requests are welcome!
 
-To set a quantization for a PointField entry "x" of point cloud which will be advertised on base topic *base_topic*, one must set the parameter:
-/base_topic/draco/attribute_mapping/quantization_bits/x.
-
-Example:
-
-```bash
-ros2 param set <node name> /<base_topic>/draco/attribute_mapping/quantization_bits/x 16
-```
-
-When using **expert_quantization**, user must specify the quantization bits for all PointField entries of point cloud.
-
-### Expert Attribute Types
-
-**Expert_attribute_types** option tell the encoder to use custom attribute types for encoding of point cloud attributes.
-
-To set a type for a PointField entry "x" of point cloud which will be advertised on base topic *base_topic*, one must set the parameter:
-`/base_topic/draco/attribute_mapping/attribute_type/x`.
-
-Example:
-
-```bash
-ros2 param set <node name> /<base_topic>/draco/attribute_mapping/attribute_type/x "'POSITION'"
-```
-
-When using **expert_attribute_types**, user must specify the type for all PointField entries of point cloud. Accepted types are:
- - POSITION
- - NORMAL
- - COLOR
- - TEX_COORD
- - GENERIC
-
-When encoding rgb/rgba COLOR, user can specify to use the common rgba tweak of ROS (encoding rgba as 4 instances of 1 Byte instead of 1 instance of float32). To inform the encoder, that PointField entry "rgb" should be handled with the tweak, set parameter:
-
-```bash
-ros2 param set <node name> /<base_topic>/draco/attribute_mapping/rgba_tweak/rgb true
-```
-
-## Subscriber
-![subscriber_settings](https://github.com/paplhjak/draco_point_cloud_transport/blob/master/readme_images/subscriber.png)
-
-### Set Skip Dequantization of Attribute Types
-**SkipDequantizationPOSITION**, **SkipDequantizationNORMAL**, **SkipDequantizationCOLOR** etc. options tell the decoder to skip dequantization of given attribute types.
+If it is not clear how to write a custom transport plugin, please see the `plugin_template` directory. This provides a template as well as written instructions for writing a custom transport plugin.
