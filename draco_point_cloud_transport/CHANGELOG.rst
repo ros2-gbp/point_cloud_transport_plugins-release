@@ -2,23 +2,28 @@
 Changelog for package draco_point_cloud_transport
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-5.0.2 (2025-10-15)
+4.0.2 (2025-10-15)
 ------------------
-* Fix linking to draco if DRACO_LIBRARIES is not defined (`#66 <https://github.com/ros-perception/point_cloud_transport_plugins/issues/66>`_)
-* Contributors: Silvio Traversaro
+* Fix linking to draco if DRACO_LIBRARIES is not defined (backport `#66 <https://github.com/ros-perception/point_cloud_transport_plugins/issues/66>`_) (`#67 <https://github.com/ros-perception/point_cloud_transport_plugins/issues/67>`_)
+* Contributors: mergify[bot]
 
-5.0.1 (2024-09-03)
+4.0.1 (2024-09-03)
 ------------------
-* Change Linking to DRACO_LIBRARIES as it was changes in draco (`#57 <https://github.com/ros-perception/point_cloud_transport_plugins/issues/57>`_)
-* Use target_link_libraries everywhere (`#52 <https://github.com/ros-perception/point_cloud_transport_plugins/issues/52>`_)
-* Contributors: Alejandro Hernández Cordero, Bo Chen
+* Change Linking to DRACO_LIBRARIES as it was changes in draco (backport `#57 <https://github.com/ros-perception/point_cloud_transport_plugins/issues/57>`_) (`#58 <https://github.com/ros-perception/point_cloud_transport_plugins/issues/58>`_)
+  Co-authored-by: Bo Chen <bo@enway.ai>
+* Contributors: mergify[bot]
 
-5.0.0 (2024-05-24)
+4.0.0 (2024-05-24)
 ------------------
-* Get user specified parameters at startup (`#46 <https://github.com/ros-perception/point_cloud_transport_plugins/issues/46>`_)
+
+3.0.4 (2024-05-24)
+------------------
+* Get user specified parameters at startup (`#46 <https://github.com/ros-perception/point_cloud_transport_plugins/issues/46>`_) (`#49 <https://github.com/ros-perception/point_cloud_transport_plugins/issues/49>`_)
   Co-authored-by: Alejandro Hernández Cordero <ahcorde@gmail.com>
+  (cherry picked from commit 46f3d22f3d5660529f4372aeed3fbcb41852a911)
+  Co-authored-by: john-maidbot <78750993+john-maidbot@users.noreply.github.com>
 * Update CI (`#47 <https://github.com/ros-perception/point_cloud_transport_plugins/issues/47>`_)
-* Contributors: Alejandro Hernández Cordero, john-maidbot
+* Contributors: Alejandro Hernández Cordero, mergify[bot]
 
 3.0.3 (2023-02-19)
 ------------------
