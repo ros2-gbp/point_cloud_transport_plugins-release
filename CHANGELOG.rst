@@ -2,6 +2,9 @@
 Changelog for package zlib_point_cloud_transport
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+5.0.2 (2025-10-15)
+------------------
+
 5.0.1 (2024-09-03)
 ------------------
 * Use target_link_libraries everywhere (`#52 <https://github.com/ros-perception/point_cloud_transport_plugins/issues/52>`_)
