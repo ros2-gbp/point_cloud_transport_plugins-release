@@ -1,0 +1,12 @@
+Source: ros-kilted-point-cloud-transport-plugins
+Section: misc
+Priority: optional
+Maintainer: Martin Pecka <peckama2@fel.cvut.cz>
+Build-Depends: debhelper (>= 9.0.0), ros-kilted-ament-cmake, ros-kilted-ros-workspace
+Homepage: https://wiki.ros.org/point_cloud_transport
+Standards-Version: 3.9.2
+
+Package: ros-kilted-point-cloud-transport-plugins
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-kilted-draco-point-cloud-transport, ros-kilted-point-cloud-interfaces, ros-kilted-zlib-point-cloud-transport, ros-kilted-zstd-point-cloud-transport, ros-kilted-ros-workspace
+Description: Metapackage with common point_cloud_transport plugins
