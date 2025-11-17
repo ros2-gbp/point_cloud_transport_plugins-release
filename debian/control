@@ -1,0 +1,12 @@
+Source: ros-rolling-point-cloud-transport-plugins
+Section: misc
+Priority: optional
+Maintainer: Martin Pecka <peckama2@fel.cvut.cz>
+Build-Depends: debhelper (>= 9.0.0), ros-rolling-ament-cmake, ros-rolling-ros-workspace
+Homepage: https://wiki.ros.org/point_cloud_transport
+Standards-Version: 3.9.2
+
+Package: ros-rolling-point-cloud-transport-plugins
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-rolling-draco-point-cloud-transport, ros-rolling-point-cloud-interfaces, ros-rolling-zlib-point-cloud-transport, ros-rolling-zstd-point-cloud-transport, ros-rolling-ros-workspace
+Description: Metapackage with common point_cloud_transport plugins
