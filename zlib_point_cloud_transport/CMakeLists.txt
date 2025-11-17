@@ -18,6 +18,9 @@ set(dependencies
   rclcpp
 )
 
+
+include_directories(include)
+
 add_library(${PROJECT_NAME}
   SHARED
   src/zlib_publisher.cpp

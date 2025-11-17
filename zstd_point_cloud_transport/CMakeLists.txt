@@ -17,6 +17,8 @@ set(dependencies
   rclcpp
 )
 
+include_directories(include)
+
 add_library(${PROJECT_NAME}
   SHARED
   src/zstd_publisher.cpp
@@ -31,10 +33,6 @@ target_link_libraries(${PROJECT_NAME} PRIVATE
   rclcpp::rclcpp
   zstd
 )
-
-target_include_directories(${PROJECT_NAME} PRIVATE
-  "$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>"
-  "$<INSTALL_INTERFACE:include/${PROJECT_NAME}>")
 
 install(TARGETS ${PROJECT_NAME}
   ARCHIVE DESTINATION lib
