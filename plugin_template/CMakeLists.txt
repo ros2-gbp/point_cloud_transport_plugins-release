@@ -1,15 +1,18 @@
+# TODO (YourNameHere): This is not a working CMake Project!
+# Some assembly required for your plugin. (-:
+
 cmake_minimum_required(VERSION 3.10.2)
 
 set(CMAKE_CXX_STANDARD 17)
 
-project(zlib_point_cloud_transport)
+project(template_point_cloud_transport)
 
 find_package(ament_cmake REQUIRED)
 find_package(pluginlib REQUIRED)
 find_package(point_cloud_interfaces REQUIRED)
 find_package(point_cloud_transport REQUIRED)
 find_package(rclcpp REQUIRED)
-find_package(ZLIB REQUIRED)
+# TODO (YourNameHere): You might need more dependencies
 
 set(dependencies
   pluginlib
@@ -18,12 +21,16 @@ set(dependencies
   rclcpp
 )
 
+target_include_directories(${PROJECT_NAME} PRIVATE
+  "$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>"
+  "$<INSTALL_INTERFACE:include/${PROJECT_NAME}>")
+
 add_library(${PROJECT_NAME}
   SHARED
-  src/zlib_publisher.cpp
-  src/zlib_subscriber.cpp
-  src/zlib_cpp.cpp
+  # TODO (YourNameHere): You might need more source files
   src/manifest.cpp
+  src/template_publisher.cpp
+  src/template_subscriber.cpp
 )
 
 target_link_libraries(${PROJECT_NAME} PRIVATE
@@ -31,12 +38,6 @@ target_link_libraries(${PROJECT_NAME} PRIVATE
   ${point_cloud_interfaces_TARGETS}
   point_cloud_transport::point_cloud_transport
   rclcpp::rclcpp
-  ZLIB::ZLIB
-)
-
-target_include_directories(${PROJECT_NAME} PRIVATE
-  "$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>"
-  "$<INSTALL_INTERFACE:include/${PROJECT_NAME}>"
 )
 
 install(TARGETS ${PROJECT_NAME}
@@ -50,7 +51,7 @@ install(
   DESTINATION include/${PROJECT_NAME}
 )
 
-pluginlib_export_plugin_description_file(point_cloud_transport zlib_plugins.xml)
+pluginlib_export_plugin_description_file(point_cloud_transport template_plugins.xml)
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
