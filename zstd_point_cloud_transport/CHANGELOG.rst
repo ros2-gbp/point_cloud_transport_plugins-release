@@ -2,7 +2,7 @@
 Changelog for package zstd_point_cloud_transport
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-6.0.0 (2025-11-17)
+5.0.3 (2025-11-17)
 ------------------
 * Correctly export dependencies for downstream packages (`#70 <https://github.com/ros-perception/point_cloud_transport_plugins/issues/70>`_)
 * Contributors: Albers Franz
