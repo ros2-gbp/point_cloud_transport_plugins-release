@@ -1,6 +1,6 @@
 /*
- * Copyright (c) 2023, Czech Technical University in Prague
- * Copyright (c) 2019, paplhjak
+ * Copyright (c) <Current Year>, <Your Name Here> (if desired)
+ * Copyright (c) 2023, Open Source Robotics Foundation, Inc.
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -30,17 +30,37 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-#include <pluginlib/class_list_macros.hpp>
 
-#include <point_cloud_transport/publisher_plugin.hpp>
-#include <point_cloud_transport/subscriber_plugin.hpp>
+#include <template_point_cloud_transport/template_subscriber.hpp>
 
-#include <zlib_point_cloud_transport/zlib_publisher.hpp>
-#include <zlib_point_cloud_transport/zlib_subscriber.hpp>
+namespace template_point_cloud_transport
+{
+void TemplateSubscriber::declareParameters()
+{
+  // Although not required, it is often useful to expose static or dynamically configurable
+  // parameters to control your compression algorithm speed and output quality.
+}
 
-PLUGINLIB_EXPORT_CLASS(
-  zlib_point_cloud_transport::ZlibPublisher,
-  point_cloud_transport::PublisherPlugin)
-PLUGINLIB_EXPORT_CLASS(
-  zlib_point_cloud_transport::ZlibSubscriber,
-  point_cloud_transport::SubscriberPlugin)
+std::string TemplateSubscriber::getTransportName() const
+{
+  // This should match the name of your transport's prefix.
+  // e.g. for template_point_cloud_transport, the prefix is template
+  return "template";
+}
+
+TemplateSubscriber::DecodeResult TemplateSubscriber::decodeTyped(
+  const point_cloud_interfaces::msg::CustomMessage & msg) const
+{
+  auto result = std::make_shared<sensor_msgs::msg::PointCloud2>();
+
+  // Add your decompression code here!
+  // turtle.decompress(msg, result);
+
+  // Although not required, it is often convenient to implement your decompression 
+  // algo in a separate file and call it here. This keeps your code 
+  // clean and easy to read.  
+
+  return result;
+}
+
+}  // namespace template_point_cloud_transport
