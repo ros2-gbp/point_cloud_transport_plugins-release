@@ -1,7 +1,7 @@
 # TODO (YourNameHere): This is not a working CMake Project!
 # Some assembly required for your plugin. (-:
 
-cmake_minimum_required(VERSION 3.20)
+cmake_minimum_required(VERSION 3.10.2)
 
 set(CMAKE_CXX_STANDARD 17)
 
@@ -21,9 +21,7 @@ set(dependencies
   rclcpp
 )
 
-target_include_directories(${PROJECT_NAME} PRIVATE
-  "$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>"
-  "$<INSTALL_INTERFACE:include/${PROJECT_NAME}>")
+include_directories(include)
 
 add_library(${PROJECT_NAME}
   SHARED
