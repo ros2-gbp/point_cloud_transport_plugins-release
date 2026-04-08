@@ -2,6 +2,9 @@
 Changelog for package point_cloud_interfaces
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+6.1.0 (2026-04-08)
+------------------
+
 6.0.1 (2026-01-19)
 ------------------
 * Fix cmake deprecation (`#73 <https://github.com/ros-perception/point_cloud_transport_plugins//issues/73>`_)
