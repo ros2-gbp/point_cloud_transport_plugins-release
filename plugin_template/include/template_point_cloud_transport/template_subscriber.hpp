@@ -51,6 +51,8 @@ class TemplateSubscriber
     point_cloud_interfaces::msg::CustomMessage>
 {
 public:
+  std::string getTransportName() const override;
+
   void declareParameters() override;
 
   std::string getDataType() const override

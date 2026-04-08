@@ -1,6 +1,4 @@
 <library path="zstd_point_cloud_transport">
-    <transport_name>zstd</transport_name>
-    <message_type>sensor_msgs/msg/PointCloud2</message_type>
     <class
         name="point_cloud_transport/zstd_pub"
         type="zstd_point_cloud_transport::ZstdPublisher"

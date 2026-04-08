@@ -51,6 +51,11 @@ void ZstdSubscriber::declareParameters()
 {
 }
 
+std::string ZstdSubscriber::getTransportName() const
+{
+  return "zstd";
+}
+
 std::string ZstdSubscriber::getDataType() const
 {
   return "point_cloud_interfaces/msg/CompressedPointCloud2";

@@ -53,6 +53,8 @@ class TemplatePublisher
     point_cloud_interfaces::msg::CustomMessage>
 {
 public:
+  std::string getTransportName() const override;
+
   void declareParameters(const std::string & base_topic) override;
 
   std::string getDataType() const override

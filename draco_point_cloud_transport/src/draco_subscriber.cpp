@@ -136,6 +136,11 @@ tl::expected<bool, std::string> convertDracoToPC2(
   return true;
 }
 
+std::string DracoSubscriber::getTransportName() const
+{
+  return "draco";
+}
+
 DracoSubscriber::DecodeResult DracoSubscriber::decodeTyped(
   const point_cloud_interfaces::msg::CompressedPointCloud2 & compressed) const
 {

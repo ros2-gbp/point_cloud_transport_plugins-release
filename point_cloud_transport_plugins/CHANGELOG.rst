@@ -2,15 +2,15 @@
 Changelog for package point_cloud_transport_plugins
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-6.1.0 (2026-04-08)
+5.0.5 (2026-04-08)
 ------------------
 
-6.0.1 (2026-01-19)
+5.0.4 (2026-01-19)
 ------------------
-* Fix cmake deprecation (`#73 <https://github.com/ros-perception/point_cloud_transport_plugins//issues/73>`_)
-* Contributors: Alejandro Hernández Cordero
+* Fix cmake deprecation (`#73 <https://github.com/ros-perception/point_cloud_transport_plugins//issues/73>`_) (`#74 <https://github.com/ros-perception/point_cloud_transport_plugins//issues/74>`_)
+* Contributors: mergify[bot]
 
-6.0.0 (2025-11-17)
+5.0.3 (2025-11-17)
 ------------------
 
 5.0.2 (2025-10-15)
