@@ -2,6 +2,12 @@
 Changelog for package zlib_point_cloud_transport
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+6.1.0 (2026-04-08)
+------------------
+* Update API (`#79 <https://github.com/ros-perception/point_cloud_transport_plugins/issues/79>`_)
+* add missing include for gcc15 (`#75 <https://github.com/ros-perception/point_cloud_transport_plugins/issues/75>`_)
+* Contributors: Alejandro Hernández Cordero, Guilhem Saurel
+
 6.0.1 (2026-01-19)
 ------------------
 * Fix cmake deprecation (`#73 <https://github.com/ros-perception/point_cloud_transport_plugins//issues/73>`_)
