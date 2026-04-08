@@ -2,6 +2,11 @@
 Changelog for package zstd_point_cloud_transport
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+6.1.0 (2026-04-08)
+------------------
+* Update API (`#79 <https://github.com/ros-perception/point_cloud_transport_plugins/issues/79>`_)
+* Contributors: Alejandro Hernández Cordero
+
 6.0.1 (2026-01-19)
 ------------------
 * Fix cmake deprecation (`#73 <https://github.com/ros-perception/point_cloud_transport_plugins//issues/73>`_)
