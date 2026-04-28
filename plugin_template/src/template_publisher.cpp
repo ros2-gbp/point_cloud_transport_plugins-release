@@ -1,4 +1,5 @@
 /*
+ * Copyright (c) <Current Year>, <Your Name Here> (if desired)
  * Copyright (c) 2023, Open Source Robotics Foundation, Inc.
  * All rights reserved.
  *
@@ -29,47 +30,30 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-#ifndef ZSTD_POINT_CLOUD_TRANSPORT__ZSTD_PUBLISHER_HPP_
-#define ZSTD_POINT_CLOUD_TRANSPORT__ZSTD_PUBLISHER_HPP_
+#include <template_point_cloud_transport/template_publisher.hpp>
 
-#include <zstd.h>
-
-#include <memory>
-#include <string>
-
-#include <sensor_msgs/msg/point_cloud2.hpp>
-
-#include <point_cloud_transport/point_cloud_transport.hpp>
-
-#include <point_cloud_transport/simple_publisher_plugin.hpp>
-#include <point_cloud_interfaces/msg/compressed_point_cloud2.hpp>
-
-
-namespace zstd_point_cloud_transport
+namespace template_point_cloud_transport
 {
 
-class ZstdPublisher
-  : public point_cloud_transport::SimplePublisherPlugin<
-    point_cloud_interfaces::msg::CompressedPointCloud2>
+void TemplatePublisher::declareParameters(const std::string & base_topic)
 {
-public:
-  ZstdPublisher();
+  // Although not required, it is often useful to expose static or dynamically configurable
+  // parameters to control your compression algorithm speed and output quality.
+}
 
-  void declareParameters(const std::string & base_topic) override;
+TemplatePublisher::TypedEncodeResult TemplatePublisher::encodeTyped(
+  const sensor_msgs::msg::PointCloud2 & raw) const
+{
+  point_cloud_interfaces::msg::CustomMessage compressed;
 
-  std::string getDataType() const override;
+  // Add your compression code here!
+  // turtle.compress(msg, result);
 
-  TypedEncodeResult encodeTyped(const sensor_msgs::msg::PointCloud2 & raw) const override;
+  // Although not required, it is often convenient to implement your compression
+  // algo in a separate file and call it here. This keeps your code
+  // clean and easy to read.
 
-private:
-  int encode_level_{7};
+  return compressed;
+}
 
-  // When compressing many times,
-  // it is recommended to allocate a context just once,
-  // and re-use it for each successive compression operation.
-  // This will make workload friendlier for system's memory.
-  ZSTD_CCtx * zstd_context_{nullptr};
-};
-}  // namespace zstd_point_cloud_transport
-
-#endif  // ZSTD_POINT_CLOUD_TRANSPORT__ZSTD_PUBLISHER_HPP_
+}  // namespace template_point_cloud_transport

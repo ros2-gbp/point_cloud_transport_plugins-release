@@ -1,4 +1,5 @@
 /*
+ * Copyright (c) <Current Year>, <Your Name Here> (if desired)
  * Copyright (c) 2023, Open Source Robotics Foundation, Inc.
  * All rights reserved.
  *
@@ -29,12 +30,9 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-#ifndef ZSTD_POINT_CLOUD_TRANSPORT__ZSTD_PUBLISHER_HPP_
-#define ZSTD_POINT_CLOUD_TRANSPORT__ZSTD_PUBLISHER_HPP_
+#ifndef TEMPLATE_POINT_CLOUD_TRANSPORT__TEMPLATE_PUBLISHER_HPP_
+#define TEMPLATE_POINT_CLOUD_TRANSPORT__TEMPLATE_PUBLISHER_HPP_
 
-#include <zstd.h>
-
-#include <memory>
 #include <string>
 
 #include <sensor_msgs/msg/point_cloud2.hpp>
@@ -42,34 +40,32 @@
 #include <point_cloud_transport/point_cloud_transport.hpp>
 
 #include <point_cloud_transport/simple_publisher_plugin.hpp>
-#include <point_cloud_interfaces/msg/compressed_point_cloud2.hpp>
+#include <point_cloud_interfaces/msg/custom_message.hpp>
 
-
-namespace zstd_point_cloud_transport
+namespace template_point_cloud_transport
 {
 
-class ZstdPublisher
+// CustomMessage could be any ROS2 message.
+// e.g. point_cloud_interfaces::msg::CompressedPointCloud2, or you can make a new one. If you do, please
+// add the definiton to point_cloud_interfaces.
+class TemplatePublisher
   : public point_cloud_transport::SimplePublisherPlugin<
-    point_cloud_interfaces::msg::CompressedPointCloud2>
+    point_cloud_interfaces::msg::CustomMessage>
 {
 public:
-  ZstdPublisher();
-
   void declareParameters(const std::string & base_topic) override;
 
-  std::string getDataType() const override;
+  std::string getDataType() const override
+  {
+    // return the name of whichever message you chose as a string
+    return "point_cloud_interfaces/msg/CustomMessage";
+  }
 
   TypedEncodeResult encodeTyped(const sensor_msgs::msg::PointCloud2 & raw) const override;
 
 private:
-  int encode_level_{7};
-
-  // When compressing many times,
-  // it is recommended to allocate a context just once,
-  // and re-use it for each successive compression operation.
-  // This will make workload friendlier for system's memory.
-  ZSTD_CCtx * zstd_context_{nullptr};
+  // good place to put any internal variables (e.g. compression algo parameters)
 };
-}  // namespace zstd_point_cloud_transport
+}  // namespace template_point_cloud_transport
 
-#endif  // ZSTD_POINT_CLOUD_TRANSPORT__ZSTD_PUBLISHER_HPP_
+#endif  // TEMPLATE_POINT_CLOUD_TRANSPORT__TEMPLATE_PUBLISHER_HPP_

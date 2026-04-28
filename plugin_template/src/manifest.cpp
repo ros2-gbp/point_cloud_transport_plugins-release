@@ -1,5 +1,6 @@
 /*
- * Copyright (c) 2023, Open Source Robotics Foundation, Inc.
+ * Copyright (c) 2023, Czech Technical University in Prague
+ * Copyright (c) 2019, paplhjak
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -29,47 +30,17 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-#ifndef ZSTD_POINT_CLOUD_TRANSPORT__ZSTD_PUBLISHER_HPP_
-#define ZSTD_POINT_CLOUD_TRANSPORT__ZSTD_PUBLISHER_HPP_
+#include <pluginlib/class_list_macros.hpp>
 
-#include <zstd.h>
+#include <point_cloud_transport/publisher_plugin.hpp>
+#include <point_cloud_transport/subscriber_plugin.hpp>
 
-#include <memory>
-#include <string>
+#include <template_point_cloud_transport/template_publisher.hpp>
+#include <template_point_cloud_transport/template_subscriber.hpp>
 
-#include <sensor_msgs/msg/point_cloud2.hpp>
-
-#include <point_cloud_transport/point_cloud_transport.hpp>
-
-#include <point_cloud_transport/simple_publisher_plugin.hpp>
-#include <point_cloud_interfaces/msg/compressed_point_cloud2.hpp>
-
-
-namespace zstd_point_cloud_transport
-{
-
-class ZstdPublisher
-  : public point_cloud_transport::SimplePublisherPlugin<
-    point_cloud_interfaces::msg::CompressedPointCloud2>
-{
-public:
-  ZstdPublisher();
-
-  void declareParameters(const std::string & base_topic) override;
-
-  std::string getDataType() const override;
-
-  TypedEncodeResult encodeTyped(const sensor_msgs::msg::PointCloud2 & raw) const override;
-
-private:
-  int encode_level_{7};
-
-  // When compressing many times,
-  // it is recommended to allocate a context just once,
-  // and re-use it for each successive compression operation.
-  // This will make workload friendlier for system's memory.
-  ZSTD_CCtx * zstd_context_{nullptr};
-};
-}  // namespace zstd_point_cloud_transport
-
-#endif  // ZSTD_POINT_CLOUD_TRANSPORT__ZSTD_PUBLISHER_HPP_
+PLUGINLIB_EXPORT_CLASS(
+  template_point_cloud_transport::TemplatePublisher,
+  point_cloud_transport::PublisherPlugin)
+PLUGINLIB_EXPORT_CLASS(
+  template_point_cloud_transport::TemplateSubscriber,
+  point_cloud_transport::SubscriberPlugin)
