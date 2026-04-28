@@ -1,0 +1,12 @@
+Source: ros-rolling-zstd-point-cloud-transport
+Section: misc
+Priority: optional
+Maintainer: Alejandro Hernandez Cordero <alejandro@openrobotics.org>
+Build-Depends: debhelper (>= 9.0.0), libzstd-dev, ros-rolling-ament-cmake, ros-rolling-ament-lint-auto <!nocheck>, ros-rolling-ament-lint-common <!nocheck>, ros-rolling-pluginlib, ros-rolling-point-cloud-interfaces, ros-rolling-point-cloud-transport, ros-rolling-rclcpp, ros-rolling-ros-workspace
+Homepage: https://wiki.ros.org/draco_point_cloud_transport
+Standards-Version: 3.9.2
+
+Package: ros-rolling-zstd-point-cloud-transport
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libzstd-dev, ros-rolling-pluginlib, ros-rolling-point-cloud-interfaces, ros-rolling-point-cloud-transport, ros-rolling-rclcpp, ros-rolling-ros-workspace
+Description: zstd_point_cloud_transport provides a plugin to point_cloud_transport for sending point clouds encoded with lib
