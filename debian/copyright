@@ -1,0 +1,9 @@
+Format: Bloom subset of https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: zstd_point_cloud_transport
+Upstream-Contact: https://github.com/ctu-vras/draco_point_cloud_transport/issues
+Source: https://github.com/ctu-vras/draco_point_cloud_transport
+
+Files: See file headers in repository for details
+Copyright: See package copyright in source code for details
+License: BSD
+ See repository for full license text
